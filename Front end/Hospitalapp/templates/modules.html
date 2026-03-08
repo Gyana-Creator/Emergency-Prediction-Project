@@ -1,0 +1,35 @@
+{%extends 'base2.html'%} {% block code %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="mtrain">
+        <h2 data-aos="fade-up">MODULE TRAIN</h2>
+        <blockquote data-aos="fade-up" data-aos-delay="100">
+          <p>
+            <form action="" enctype="multipart/form-data" method="post">
+                <center><b><h1>{{msg}}</h1></b></center>
+                {% csrf_token %}
+              <label for="algo" style="color:white;"><h2>:algorihtms:</h2></label>
+                    <br>
+            
+                    <select name="algo" id="algo"  style="width: 500px; height: 50px;">
+                      <option value="">chose Module</option>
+                      <option value="1">Logistic Regration</option>
+                      <option value="2">Naive Bias</option>
+                      <option value="3">Random Forest</option>
+                      <option value="4">MLP</option>
+                      <option value="5">SVC</option>
+                      <option value="6">LSTM</option>
+                                         
+            
+                    </select>
+                    <br><br>
+                    <button type="submit" class="btn btn-primary" style="width: 500px;">Submit</button>
+                  
+                       
+              </form>
+
+  </div>
+</section>
+</form>
+<!-- End Hero Section -->
+{% endblock %}

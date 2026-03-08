@@ -1,0 +1,27 @@
+{%extends 'base2.html'%} {% block code %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="load">
+            <form action="" enctype="multipart/form-data" method="POST">
+                {% csrf_token %}
+                <center style="background-color:#33475b">
+                    <label for="myfile" style="color: white;">Select file:</label>
+                    <br>
+                    <input type="file"  id="myfile" name="myfile" multiple style="color: white;"><br><br>
+                 
+                 <button type="submit" class="btn btn-primary" >Submit</button>
+                 </center>
+                         {% if res %}
+                          <center><h3>{{res}}</h3></center>
+                          {% endif %}
+                 
+                       
+                    </div>
+        
+        
+        
+        <!--Login--> 
+</section>
+</form>
+<!-- End Hero Section -->
+{% endblock %}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta content="width=device-width, initial-scale=1.0" name="viewport" /> -->
+
+    <title>Hospital</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+
+    <!-- Template Main CSS File -->
+    <link href="/static/assets/css/main.css" rel="stylesheet" />
+
+    <!-- =======================================================
+  * Template Name: Nova - v1.3.0
+  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body class="page-index">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="d-flex align-items-center">Hospital</h1>
+        </a>
+
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li>
+              <a href="/"><h4>Home</h4></a>
+            </li>
+            <li>
+              <a href="/about"><h4>About</h4></a>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                ><span><h4>Login and Registration</h4></span>
+                <i class="bi bi-chevron-down dropdown-indicator"></i
+              ></a>
+              <ul>
+                <li><a href="/register"><h5>Registration</h5></a></li>
+                
+                  <a href="/login"><span><h5>Login</h5></span>
+                    <i class="bi bi-chevron-down dropdown-indicator"></i
+                  ></a>
+                  
+          </ul>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+    {% block code%} {% endblock %}
+    <a
+      href="#"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <div id="preloader"></div>
+
+    <!-- Template Main JS File -->
+    <script src="/static/assets/js/main.js"></script>
+  </body>
+</html>

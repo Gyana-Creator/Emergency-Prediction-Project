@@ -1,0 +1,273 @@
+{%extends 'base2.html'%} {% block code %}
+<!-- ======= Hero Section ======= -->
+    <div class="row">
+      <div class="col-xl-4">
+        <h2 data-aos="fade-up">PREDICTION</h2>
+        <blockquote data-aos="fade-up" data-aos-delay="100">
+          <p>
+            {% if msg == 0 %}
+          
+              <h1 style="color: greenyellow;">its not a emergency case</h1>
+              <h1 style="color: greenyellow;">[The result is not accepted during Pandeminc]</h1>
+
+             {% endif %}
+             {% if msg == 1 %}
+          
+              <h1 style="color: red;">its emergency case</h1>
+              <h1 style="color: red;">[The result is not accepted during Pandeminc]</h1>
+             {% endif %}
+            <form action="" method="post">
+                {% csrf_token %}
+                
+               
+                <table>
+                  <tr>
+                      <td>                
+                              <label>hospital</label>
+                              <select name="f1">
+                                <option value="1">All India Institute of Medical Sciences (AIIMS), Bhubaneswar</option>
+                                <option value="2">SCB Medical College and Hospital, Cuttack</option>
+                                <option value="3">SUM Ultimate Medicare, Bhubaneswar</option>
+                                <option value="4">Kalinga Institute of Medical Sciences (KIMS), Bhubaneswar</option>
+                                <option value="5">Apollo Hospitals, Bhubaneswar</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="6">MKCG Medical College and Hospital, Berhampur</option>
+                                <option value="7">VIMSAR, Burla</option>
+                                <option value="8">Hi-Tech Medical College & Hospital, Bhubaneswar</option>
+                                <option value="9">Sun Hospital, Cuttack</option>
+                                <option value="10">Aditya Care Hospital, Bhubaneswar</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="11">Capital Hospital, Bhubaneswar</option>
+                                <option value="12">Sparsh Hospital, Bhubaneswar</option>
+                                <option value="13">Acharya Harihar Regional Cancer Centre, Cuttack</option>
+                                <option value="14">Jagannath Hospital, Cuttack</option>
+                                <option value="15">Swosti Premium, Bhubaneswar</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="16">Hi-Tech Medical College & Hospital, Rourkela</option>
+                                <option value="17">Pandit Raghunath Murmu Medical College and Hospital, Baripada</option>
+                                <option value="18">DHH Kendrapara, Kendrapara</option>
+                                <option value="19">Bhanja Medical College and Hospital, Rourkela</option>
+                                <option value="20">IMFA Hospital, Therubali</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="21">DHH Jajpur, Jajpur</option>
+                                <option value="22">SUM Hospital, Bhubaneswar</option>
+                                <option value="23">DHH Balasore, Balasore</option>
+                                <option value="24">Rajendra Narayan Memorial Trust Hospital, Keonjhar</option>
+                                <option value="25">Apollo Hospitals, Bhubaneswar (Unit 2)</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="26">Burla Medical College and Hospital, Sambalpur</option>
+                                <option value="27">Annapurna Memorial Hospital, Cuttack</option>
+                                <option value="28">DHH Rayagada, Rayagada</option>
+                                <option value="29">Aditya Hospital, Angul</option>
+                                <option value="30">Kalinga Institute of Social Sciences (KISS), Bhubaneswar</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="31">Ashwini Hospital, Cuttack</option>
+                                <option value="32">DHH Mayurbhanj, Mayurbhanj</option>
+                                <option value="33">Medicare Hospital, Cuttack</option>
+                                <option value="34">DHH Koraput, Koraput</option>
+                                <option value="35">Neelachal Hospital, Bhubaneswar</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="36">DHH Ganjam, Ganjam</option>
+                                <option value="37">MKCG Medical College and Hospital, Brahmapur</option>
+                                <option value="38">DHH Nayagarh, Nayagarh</option>
+                                <option value="39">Bhubaneswar Hospital of Gastro Sciences (BHOGS), Bhubaneswar</option>
+                                <option value="40">DHH Nuapada, Nuapada</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="41">DHH Dhenkanal, Dhenkanal</option>
+                                <option value="42">Sparsh Hospital, Cuttack</option>
+                                <option value="43">DHH Kalahandi, Kalahandi</option>
+                                <option value="44">Sri Jagannath Medical College and Hospital, Puri</option>
+                                <option value="45">DHH Bargarh, Bargarh</option>
+                                <!-- Add more options for other hospitals -->
+                                <option value="46">Sunshine Hospital, Bhubaneswar</option>
+                                <option value="47">DHH Angul, Angul</option>
+                                <option value="48">Care Hospitals, Bhubaneswar</option>
+                                <option value="49">DHH Balangir, Balangir</option>
+                                <option value="50">Hindustan Aeronautics Limited (HAL) Hospital, Sunabeda</option>
+                                <!-- Add more options for other hospitals -->
+                            </select>
+                      </td>
+                      
+                      <td>                
+                              <label>sex</label>
+                              <select name="f2">
+                                <option value="0">Male</option>
+                                <option value="1">Female</option>
+                              </select>
+                     </td>
+                     
+                     <td>                
+                              <label>age</label>
+                              <input type="float" name = 'f3' placeholder="age">
+                     </td>
+                     
+                     <td>                
+                              <label>patient_num_hr</label>
+                              <input type="float" name = 'f4' placeholder="patient_num_hr">
+                     </td>
+                     
+                     <td>                
+                              <label>arrival_mode</label>
+                              <input type="float" name = 'f5' placeholder="arrival_mode">
+                     </td>
+                     <br>
+                
+      
+      
+                  </tr>
+                  <tr>
+              </table>
+      
+              <table>
+                  <tr>
+                      <td>                
+                              <label>injury</label>
+                              <input type="float" name = 'f6' placeholder="injury">
+                      </td>
+                      
+                      <td>                
+                              <label>complaint</label>
+                              <input type="float" name = 'f7' placeholder="complaint">
+                     </td>
+                     
+                     <td>                
+                              <label>mental</label>
+                              <input type="float" name = 'f8' placeholder="mental">
+                     </td>
+                     
+                     <td>                
+                              <label>pain</label>
+                              <input type="float" name = 'f9' placeholder="pain">
+                     </td>
+                     
+                     <td>                
+                              <label>pain_scale</label>
+                              <input type="float" name = 'f10' placeholder="pain_scale">
+                     </td>
+                     <br>
+                
+      
+      
+                  </tr>
+                  <tr>
+              </table>
+              <table>
+                  <tr>
+                      <td>                
+                              <label>SBP</label>
+                              <input type="float" name = 'f11' placeholder="SBP">
+                      </td>
+                      
+                      <td>                
+                              <label>DBP</label>
+                              <input type="float" name = 'f12' placeholder="DBP">
+                     </td>
+                     
+                     <td>                
+                              <label>HR</label>
+                              <input type="float" name = 'f13' placeholder="HR">
+                     </td>
+                     
+                     <td>                
+                              <label>RR</label>
+                              <input type="float" name = 'f14' placeholder="RR">
+                     </td>
+                       
+                     <td>                
+                              <label>BT</label>
+                              <input type="float" name = 'f15' placeholder="BT">
+                      </td>
+                      <br>          
+      
+      
+                  </tr>
+                  <tr>
+              </table>
+              <table>
+                <tr>
+                    <td>                
+                            <label>saturation</label>
+                            <input type="float" name = 'f16' placeholder="saturation">
+                    </td>
+                    
+                    <td>                
+                            <label>KTAS_RN</label>
+                            <input type="float" name = 'f17' placeholder="KTAS_RN">
+                   </td>
+                   
+                   <td>                
+                            <label>diagnosis</label>
+                            <input type="float" name = 'f18' placeholder="diagnosis">
+                   </td>
+                   
+                   <td>                
+                            <label>result</label>
+                            <input type="float" name = 'f19' placeholder="result">
+                   </td>
+                     
+                   <td>                
+                            <label>KTAS_expert</label>
+                            <input type="float" name = 'f20' placeholder="KTAS_expert">
+                    </td>
+                    <br>          
+    
+    
+                </tr>
+                <tr>
+            </table>
+            <table>
+              <tr>
+                  <td>                
+                          <label>error_code</label>
+                          <input type="float" name = 'f21' placeholder="error_code">
+                  </td>
+                  
+                  <td>                
+                          <label>stay_min</label>
+                          <input type="float" name = 'f22' placeholder="stay_min">
+                 </td>
+                 
+                 <td>                
+                          <label> KTAS_duration_min</label>
+                          <input type="float" name = 'f23' placeholder="KTAS_duration_min">
+                 </td>
+                 
+                 <td>                
+                          <label>mistriage</label>
+                          <input type="float" name = 'f24' placeholder="mistriage">
+                 </td>
+                   
+                 
+                  <br>          
+    
+    
+              </tr>
+              <tr>
+          </table>
+          
+       
+                     
+    
+                             
+                       
+                      <br>
+                  <div class="centered">
+                    <br><br>
+                 <center> <button type="submit" class="btn btn-primary" style="width: 400px; border-radius: 20%;">Submit</button></center>
+              </form>
+    
+          </p>
+        </blockquote>
+        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+          <a
+            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            class="glightbox btn-watch-video d-flex align-items-center"
+            >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+<!-- End Hero Section -->
+{% endblock %}

@@ -1,0 +1,23 @@
+{%extends 'base.html'%} {% block code %}
+<!-- ======= Hero Section ======= -->
+
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="reg">
+        <h2 data-aos="fade-up">Registration</h2>
+        <blockquote data-aos="fade-up" data-aos-delay="100">
+          <p>
+           
+              <form action="{% url 'register' %}" method="post">
+                {% csrf_token %}
+             
+                <table>
+              {{ register_form }}
+            </table>
+            
+              <button type="submit" class="btn btn-primary" >Submit</button>
+          </form>
+  </div>
+</section>
+
+<!-- End Hero Section -->
+{% endblock %}

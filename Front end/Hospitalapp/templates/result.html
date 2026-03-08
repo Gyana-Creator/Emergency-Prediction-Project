@@ -1,0 +1,39 @@
+{%extends 'base2.html'%} {% block code %}
+<!-- ======= Hero Section ======= -->
+
+<section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4">
+        <h2 data-aos="fade-up">This album contains the following songs:</h2>
+        <blockquote data-aos="fade-up" data-aos-delay="100">
+          <p>
+           
+              <form action="" method="post">
+                {% csrf_token %}
+               <center >
+                <table>
+                  {% for i in res %}
+                       <h4>{{i}}</h4>
+                    {% endfor %}
+            </table>
+              </center>
+      
+            </div>
+          </form>
+            
+          </p>
+        </blockquote>
+        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+          <a
+            href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            class="glightbox btn-watch-video d-flex align-items-center"
+            >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- End Hero Section -->
+{% endblock %}
